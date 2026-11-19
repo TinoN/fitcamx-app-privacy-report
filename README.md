@@ -1,9 +1,22 @@
 # FITCAMX dashcam app (com.vidure.fitcamx) phones home: privacy report
 
+## Summary
+
 This is an independent privacy review of the **FitCamX dashcam app** for Android (**FITCAMX**, package `com.vidure.fitcamx`, publisher "Viidure-pub" on Google Play, built on the Vidure/Viidure white-label dashcam client).
-It finds that the app "phones home" to a vendor cloud hosted in China (**data sent to China**), and that it initialises third-party tracking-capable SDKs before the user has given consent.
+The app "phones home" on every start to a vendor cloud hosted in China (**data sent to China**), sending a persistent app ID, phone details and the model, firmware and MAC address of saved cameras.
+It also initialises Baidu and Facebook SDKs before or without real consent, writes verbose debug logs, saves clips in shared storage and requests more permissions than it needs.
 Camera functions themselves stay on the camera's local Wi-Fi.
-The items below are privacy findings; they are facts about what the code does, not claims about intent.
+The findings are facts about what the code does, not claims about intent.
+
+## Zusammenfassung
+
+Dies ist eine unabhängige Datenschutzprüfung der **FITCAMX Dashcam App** für Android (Paketname `com.vidure.fitcamx`, Herausgeber "Viidure-pub" bei Google Play, basierend auf der Vidure/Viidure-Dashcam-Software).
+Die App **telefoniert nach Hause**: Bei jedem Start nimmt sie Kontakt zu einer Cloud des Herstellers in China auf (**Daten nach China**, Server bei Huawei Cloud in Shenzhen) und übermittelt eine dauerhafte App-ID, Angaben zum Smartphone sowie Modell, Firmware und MAC-Adresse der gespeicherten Kameras, außerdem lässt sich darüber die öffentliche IP-Adresse des Handys orten.
+Zudem startet die App Baidu- und Facebook-SDKs, ohne dass eine echte Einwilligung vorliegt, schreibt ausführliche Debug-Protokolle (auch mit GPS-Daten), speichert Videos im gemeinsamen Speicher und fordert mehr Berechtigungen an als nötig.
+Die Kamerafunktionen selbst laufen weiter nur über das lokale WLAN der Kamera.
+Das sind Datenschutz-Befunde zum Verhalten des Codes, keine Aussagen über Absichten.
+Tipps für Besitzer: nicht benötigte Berechtigungen verweigern, Standort nur "bei Nutzung der App" erlauben, ein starkes eigenes WLAN-Passwort für die Kamera setzen, Videos von der Cloud-Fotosicherung ausnehmen und das Feedback-Formular der App nicht nutzen.
+Der Rest dieses Berichts ist auf Englisch.
 
 ## What was analysed
 
