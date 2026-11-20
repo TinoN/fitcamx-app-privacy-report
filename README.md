@@ -9,8 +9,8 @@ Camera functions themselves stay on the camera's local Wi-Fi.
 The findings are facts about what the code does, not claims about intent.
 
 **Necessary vs. unnecessary**
-- OK, legitimate: firmware-update check (camera model + firmware version).
-- Not needed: persistent tracking ID; camera MAC address; public-IP geolocation; server-directed "fetch this URL"; auto-started Baidu + Facebook SDKs.
+- OK, legitimate: the app checking for updates to the app itself.
+- Not needed: each saved camera's model, firmware and MAC (per the vendor the cameras have no over-the-air firmware update, so this is tracking/registration, not an update check); persistent tracking ID; public-IP geolocation; server-directed "fetch this URL"; auto-started Baidu + Facebook SDKs.
 
 ## Zusammenfassung
 
@@ -22,8 +22,8 @@ Das sind Datenschutz-Befunde zum Verhalten des Codes, keine Aussagen über Absic
 Tipps für Besitzer: nicht benötigte Berechtigungen verweigern, Standort nur "bei Nutzung der App" erlauben, ein starkes eigenes WLAN-Passwort für die Kamera setzen, Videos von der Cloud-Fotosicherung ausnehmen und das Feedback-Formular der App nicht nutzen.
 
 **Nötig vs. unnötig**
-- In Ordnung: Firmware-Update-Prüfung (Kameramodell + Firmware-Version).
-- Unnötig: dauerhafte Tracking-ID; MAC-Adresse der Kamera; Ortung über öffentliche IP; server-gesteuertes "ruf diese URL ab"; automatisch startende Baidu- und Facebook-SDKs.
+- In Ordnung: dass die App nach Updates für die App selbst sucht.
+- Unnötig: Modell, Firmware und MAC-Adresse jeder gespeicherten Kamera (die Kameras haben laut Hersteller kein Firmware-Update über das Netz, dient also der Registrierung/Telemetrie, nicht einer Update-Prüfung); dauerhafte Tracking-ID; Ortung über öffentliche IP; server-gesteuertes "ruf diese URL ab"; automatisch startende Baidu- und Facebook-SDKs.
 
 Der Rest dieses Berichts ist auf Englisch.
 
